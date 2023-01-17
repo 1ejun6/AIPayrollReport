@@ -136,30 +136,31 @@
           <av:Size x:Key="ShapeSize">200,52.8</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="627.2,2439.2" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[{&quot;2021&quot;, &quot;2020&quot;, &quot;2019&quot;, &quot;2018&quot;}]">
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="627.2,2644" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[{&quot;2021&quot;, &quot;2020&quot;, &quot;2019&quot;, &quot;2018&quot;}]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:String">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:String" Name="year" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,2314.4" sap2010:WorkflowViewState.IdRef="Sequence_239">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,2519.2" sap2010:WorkflowViewState.IdRef="Sequence_239">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[&quot;PayrollReport_&quot;+year+&quot;.docx&quot;]" sap:VirtualizedContainerService.HintSize="529.6,2202.4" sap2010:WorkflowViewState.IdRef="WordApplicationScope_3">
+              <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[&quot;PayrollReport_&quot;+year+&quot;.docx&quot;]" sap:VirtualizedContainerService.HintSize="529.6,2407.2" sap2010:WorkflowViewState.IdRef="WordApplicationScope_3">
                 <p:WordApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WordDocument">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,2092.8" sap2010:WorkflowViewState.IdRef="Sequence_238">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,2297.6" sap2010:WorkflowViewState.IdRef="Sequence_238">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
+                      <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="433.6,164.8" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" Replace="[year]" ReplaceAll="True" Search="noofyear" />
                       <p:WordAddImage Bookmark="{x:Null}" OccurrenceIndex="{x:Null}" DisplayName="Add Picture" sap:VirtualizedContainerService.HintSize="433.6,296.8" sap2010:WorkflowViewState.IdRef="WordAddImage_9" ImagePath="[&quot;outputimages\&quot;+year+&quot;Mar\I.png&quot;]" InsertRelativeTo="Text" Position="Replace" Text="first" />
                       <p:WordAddImage Bookmark="{x:Null}" OccurrenceIndex="{x:Null}" DisplayName="Add Picture" sap:VirtualizedContainerService.HintSize="433.6,296.8" sap2010:WorkflowViewState.IdRef="WordAddImage_25" ImagePath="[&quot;outputimages\&quot;+year+&quot;Mar\Il.png&quot;]" InsertRelativeTo="Text" Position="Replace" Text="second" />
                       <p:WordAddImage Bookmark="{x:Null}" OccurrenceIndex="{x:Null}" DisplayName="Add Picture" sap:VirtualizedContainerService.HintSize="433.6,296.8" sap2010:WorkflowViewState.IdRef="WordAddImage_26" ImagePath="[&quot;outputimages\&quot;+year+&quot;Mar\Ill.png&quot;]" InsertRelativeTo="Text" Position="Replace" Text="third" />
